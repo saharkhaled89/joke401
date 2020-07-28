@@ -1,5 +1,3 @@
-DROP TABLE EXISTS jokeTable;
-
 CREATE TABLE IF NOT EXISTS jockeTable(
 
     id SERIAL PRIMARY KEY,
