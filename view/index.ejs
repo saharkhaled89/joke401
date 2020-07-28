@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="../style.css">
+</head>
+<body>
+  <header>
+
+  </header>  
+<main>
+    <div class="container">
+        <%joke.forEach(data=>{%>
+            <div class="card">
+                <h1>
+                    <%=data.joke_type%>
+                </h1>
+
+                <%=data.joke_setup%>
+                <%=data.joke_punchline%>
+                <button><a href="/detil/<%=data.id%>"show Detail</a></button>
+            </div>
+            <%});%>
+
+    </div>
+</main>
+</body>
+</html>
