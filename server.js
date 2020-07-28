@@ -66,3 +66,16 @@ function favjoke(req,res){
     .then((data)=>{
         response.render('fav',{joke:data.rows});
 }
+
+function updatejoke(req,res){
+
+    let{ joke_type, joke_setup,joke_punchline}=req.body;
+    let SQL=
+    `INSERT INTO jockeTable(joke_type, joke_setup,joke_punchline)VALUES($1,$2,$3) `;
+    let value=[req.params.id];
+    client.query(SQL,value);
+
+  .then((data)=>{
+        response.render('detail',{joke:data.rows[0]});
+}
+
